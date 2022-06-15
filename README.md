@@ -48,11 +48,11 @@ N/A
 ## Specs/TDD
 
 ```
-Description
+Description randomizeNumber()
 
-Test:
-Code:
-Expected Output:
+Test: Generate a number 1-6 when the Dice Button is clicked
+Code: randomizeNumber(1, 6);
+Expected Output: random number 1-6;
 
 
 
