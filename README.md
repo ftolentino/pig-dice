@@ -52,7 +52,7 @@ Description randomizeNumber()
 
 Test: Generate a number 1-6 when the Dice Button is clicked
 Code: randomizeNumber(1, 6);
-Expected Output: random number 1-6;
+Expected Output: random number 1-6, but not 0;
 
 
 
