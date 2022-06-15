@@ -14,11 +14,13 @@ function randomizeNumber (min, max) {
 
 
 // UI Logic
+
+
 $(document).ready(function() {
-  attachContactListeners();
-  $("form#dice-form").submit(function(event) {
+  $("button#dice-button").click(function(event) {
     event.preventDefault();
-    const diceRollNumber = 
+    let diceRollNumber = randomizeNumber(1, 6);
+    console.log(diceRollNumber);
     
 
    
