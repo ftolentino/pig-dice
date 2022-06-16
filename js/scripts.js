@@ -1,47 +1,42 @@
 // Business Logic for Player Scores
 function ScoreTable () {
-  this.score = {};
-}
-PlayerOneScore.prototype.addScore = function(score){
-  
-}
-// Business Logic for Players
-function Players(playerOneScore, playerTwoScore) {
-  this.playerOneScore = playerOneScore;
-  this.playerTwoScore = playerTwoScore;
+  // this.diceNumber = function () {
+  //   Math.floor(Math.random() * 6) + 1;
+  // }
+  this.score = 0;
+  this.diceNumber = 0;
+  this.diceSum = 0;
 }
 
-Players.prototype.scoreSum = function () {
-  let diceRollNumber = diceRoll(1, 6);
-  return this.playerOneScore = diceRollNumber;
-}
+let playerOne = new ScoreTable();
+
 
 // Business Logic for Dice
-function diceRoll (min, max) {
-   min = Math.ceil(min);
-
-   max = Math.floor(max);
-
-  return Math.floor(Math.random() * (max - min + 1) + min);
+ScoreTable.prototype.diceRoll = function () {
+  this.diceNumber = Math.floor(Math.random() * 6) + 1;
 }
 
-
-
-
-
+// Business Logic for Adding Dice total
+ScoreTable.prototype.scoreSum = function () {
+  if (this.diceNumber === 1) {
+    this.diceSum = 0;
+  } else {
+    this.diceSum += this.diceNumber; 
+  }
+}
 
 
 // UI Logic
 
-
 $(document).ready(function() {
   $("button#dice-button").click(function(event) {
     event.preventDefault();
-    let diceRollNumber = diceRoll(1, 6);
-    console.log(diceRollNumber);
-    
+    playerOne.diceRoll();
+    playerOne.scoreSum();
 
+    console.log(playerOne);
    
-   $('ul#dice-number').show().html(diceRollNumber);
+
+   $('ul#dice-number').show().html(playerOne);
   });
 });
