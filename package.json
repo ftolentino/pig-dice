@@ -1,0 +1,24 @@
+{
+  "name": "pig-dice",
+  "version": "1.0.0",
+  "description": "_Epicodus Week 4 - Pig Dice Game_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftolentino/pig-dice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ftolentino/pig-dice/issues"
+  },
+  "homepage": "https://github.com/ftolentino/pig-dice#readme",
+  "devDependencies": {
+    "webpack": "4.39.3",
+    "webpack-cli": "^3.3.8"
+  }
+}
